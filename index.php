@@ -1,7 +1,7 @@
  <!DOCTYPE html>
 <html>
 <head>
-	<title>Website Tim</title>
+	<title>Website Gijs</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
