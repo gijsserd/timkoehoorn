@@ -25,6 +25,8 @@ if (isset($_SESSION['username'])){
 					<th>Aangemaakt op</th>
 					<th>Laatst bewerkt op</th>
 					<th>auteur</th>
+					<th></th>
+					<th></th>
 				</tr>
 				
 			<?php
@@ -41,15 +43,15 @@ if (isset($_SESSION['username'])){
 							<td><a href="?>"><img/></a></td>
 							<td><a href="?>"><img/></a></td>
 						</tr>
-						<?php}
-						}else{?>
+						<?php }
+						}else{ ?>
 						<tr>
 							<td>no data found</td>
 							<td>no data found</td>
 							<td>no data found</td>
 							<td>no data found</td>
 						</tr>
-						<?php}
+						<?php }
 					$connect->close();					
 			?>
 			</table>
