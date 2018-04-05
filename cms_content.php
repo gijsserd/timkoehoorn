@@ -1,6 +1,7 @@
 <?php
 require "connect.php";
 session_start();
+if (isset($_SESSION['username'])){
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +13,7 @@ session_start();
 	
 </head>
 <header>
-	<p>Logged in as <?php echo $_SESSION['username'] ?> </p>
+	<p>Logged in as <?php echo $_SESSION['username']; ?> </p>
 	<a href="logout.php">Logout</a>
 </header>
 <body>
@@ -40,7 +41,8 @@ session_start();
 							<td><a href="?>"><img/></a></td>
 							<td><a href="?>"><img/></a></td>
 						</tr>
-						<?php}}else{?>
+						<?php}
+						}else{?>
 						<tr>
 							<td>no data found</td>
 							<td>no data found</td>
@@ -66,4 +68,12 @@ session_start();
 	});
 	</script>
 </footer>
+<?php
+			}
+	else {
+		$connect->close();	
+		header("Location: login.php");
+		die;
+	}
+?>
 </html> 
