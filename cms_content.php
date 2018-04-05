@@ -20,10 +20,10 @@ session_start();
 		<div class="content-left">
 			<table class="content-table" >
 				<tr class="content-table-row">
-					<th>test</th>
-					<th>test</th>
-					<th>test</th>
-					<th>test</th>
+					<th>Titel</th>
+					<th>Aangemaakt op</th>
+					<th>Laatst bewerkt op</th>
+					<th>auteur</th>
 				</tr>
 				
 			<?php
@@ -32,26 +32,22 @@ session_start();
 
 					if($result->num_rows > 0){
 					While($row = $result->fetch_assoc()){
-						?>
-						<tr>
+						?><tr>
 							<td><?=$row["title"]?></td>
 							<td><?=$row["creation_date"]?></td>
 							<td><?=$row["update_date"]?></td>
 							<td><?=$row["author"]?></td>
+							<td><a href="?>"><img/></a></td>
+							<td><a href="?>"><img/></a></td>
 						</tr>
-						<?php
-						}
-					}else{
-						?>
+						<?php}}else{?>
 						<tr>
 							<td>no data found</td>
 							<td>no data found</td>
 							<td>no data found</td>
 							<td>no data found</td>
 						</tr>
-						<?php
-					}
-
+						<?php}
 					$connect->close();					
 			?>
 			</table>
