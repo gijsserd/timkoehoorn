@@ -3,9 +3,14 @@
 header{
 	position: relative;
 	background-color: #111111;
+	color: #fefefe;
 	height: 100px;
 	width: 100%;
 	box-sizing: border-box;
+}
+
+header p{
+	margin: 0px;
 }
 
 /* END Header */
