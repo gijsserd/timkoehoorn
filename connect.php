@@ -12,7 +12,7 @@ else {
 	$server = "localhost";
 	$username = "root";
 	$password = "";
-	$databasename = "portfolio";
+	$databasename = "database_tim";
 }
 $connect = new mysqli($server, $username, $password, $databasename);
 if ($connect->connect_error){

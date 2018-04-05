@@ -1,4 +1,8 @@
- <!DOCTYPE html>
+<?php
+require "connect.php";
+?>
+
+<!DOCTYPE html>
 <html>
 <head>
 	<title>CMS</title>
