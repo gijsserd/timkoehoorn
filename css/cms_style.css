@@ -63,10 +63,18 @@ body{
 	margin: 0;
 }
 
+table, tr, th, td{
+	border-collapse: collapse;
+}
+
+p, h1, h2{
+	margin: 0;
+}
+
 a{
   color:inherit;
   text-decoration: none;
- }
+}
 
 .menu-container{
 	display: flex;
@@ -84,7 +92,7 @@ a{
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	background-color: #f9f9f9;
+	background-color: #fefefe;
 	height: 400px;
 	width: 300px;
 	margin: 50px;
@@ -105,6 +113,47 @@ a{
 	width: 100%;
 }
 
+/* Content Grid */
+
+.content-grid{
+	 display: grid;
+	 grid-template-areas:
+    'main main main main right right';
+	grid-column-gap: 50px;
+	padding: 100px;
+}
+
+.content-table{
+	width: 100%;
+}
+
+.content-table-row{
+	background-color: #111111;
+	font-size: 2em;
+	color: #fefefe;
+	padding: 5px;
+}
+
+.content-table tr{
+	text-align: left;
+}
+
+.content-left{
+	background-color: grey;
+	grid-area: main;
+	height: 500px;
+	margin: 20px;
+	box-sizing: border-box;
+}
+
+.content-right{
+	background-color: grey;
+	grid-area: right;
+	margin: 20px;
+	box-sizing: border-box;
+}
+
+/* END Content Grid /
 /* END Body */
 /* Footer */
 
