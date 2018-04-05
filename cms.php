@@ -19,26 +19,35 @@ session_start();
 			<div class="menu-item">
 				<div class="menu-icon">
 				</div>
+				<h1>Article</h1>
 			</div>
 		</a>
 		<a href="">
 			<div class="menu-item">
-			
+				<div class="menu-icon">
+				</div>
+				<h1>Article</h1>
 			</div>
 		</a>
 		<a href="">
 			<div class="menu-item">
-			
+				<div class="menu-icon">
+				</div>
+				<h1>Article</h1>
 			</div>
 		</a>
 		<a href="">
 			<div class="menu-item">
-			
+				<div class="menu-icon">
+				</div>
+				<h1>Article</h1>
 			</div>
 		</a>
 		<a href="">
 			<div class="menu-item">
-			
+				<div class="menu-icon">
+				</div>
+				<h1>Article</h1>
 			</div>
 		</a>
 	</div>
