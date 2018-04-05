@@ -1,5 +1,6 @@
 <?php
 require "connect.php";
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +10,8 @@ require "connect.php";
 	<link rel="stylesheet" type="text/css" href="css/cms_style.css">
 </head>
 <header>
-	
+	<p>Logged in as <?php echo $_SESSION['username'] ?> </p>
+	<a href="logout.php">Logout</a>
 </header>
 <body>
 	<div class="menu-container">
