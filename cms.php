@@ -8,7 +8,20 @@
 	
 </header>
 <body>
-
+	<div class="menu-container">
+		<div class="menu-item">
+		</div>
+		<div class="menu-item">
+		</div>
+		<div class="menu-item">
+		</div>
+		<div class="menu-item">
+		</div>
+		<div class="menu-item">
+		</div>
+		<div class="menu-item">
+		</div>
+	</div>
 
 </body>
 </html> 
