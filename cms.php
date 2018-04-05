@@ -1,6 +1,7 @@
 <?php
 require "connect.php";
 session_start();
+if (isset($_SESSION['username'])){
 ?>
 
 <!DOCTYPE html>
@@ -53,4 +54,11 @@ session_start();
 	</div>
 
 </body>
+<?php
+			}
+	else {
+		header("Location: login.php");
+		die;
+	}
+?>
 </html> 

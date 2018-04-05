@@ -6,7 +6,7 @@ require "connect.php";
 	<head>
 		<!--<script src="js/jquery.min.js" ></script>
 		<script src="js/script.js" ></script> !-->
-		<link href="css/style.css" media="all" rel="stylesheet" />
+		<link href="css/cms_style.css" media="all" rel="stylesheet" />
 		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	</head>
 	
@@ -17,7 +17,7 @@ require "connect.php";
 			<form action="" method="POST">
 				<input type="text" name="username" placeholder="enter username" value="" required>
 				<input type="password" name="password" placeholder="enter password" value="" required>
-				<input type="submit" name="loginbutton" value="Login" id="submitbutton">
+				<input type="submit" name="loginbutton" value="Login" id="loginbutton">
 			</form>
 			<?php
 				if(isset($_POST["loginbutton"]))
