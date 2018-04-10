@@ -16,7 +16,13 @@ if (isset($_SESSION['username'])){
 	<p>Logged in as <?php echo $_SESSION['username']; ?> </p>
 	<a href="logout.php">Logout</a>
 </header>
-<body>
+<body onload="Error()">
+	<div class="error-display" id="error">
+		<h2></h2>
+		<h2 class ="error-msg" id="error-msg">error: </h2>
+		<img onclick="ErrorRemove()" class="error-close-button" src="img/closeicon.png"/>
+	</div>
+	
 	<div class="content-grid">
 		<div class="content-left">
 			<table class="content-table" >
@@ -40,8 +46,8 @@ if (isset($_SESSION['username'])){
 							<td><?=$row["creation_date"]?></td>
 							<td><?=$row["update_date"]?></td>
 							<td><?=$row["author"]?></td>
-							<td><a href=""><img src=""/></a></td>
-							<td onclick="ConfirmDel('<?=$row["title"]?>')"><a href=""><img src="img/deleteicon.png" /></a></td>
+							<td title="Edit"><a href="edit.php"><img src="img/editicon.png"/></a></td>
+							<td onclick="ConfirmDel('<?=$row["title"]?>', 'article', '<?=$row["id"]?>')" title="Delete"><a href=""><img src="img/icondelete.png" /></a></td>
 						</tr>
 						<?php }
 						}else{ ?>
@@ -57,11 +63,16 @@ if (isset($_SESSION['username'])){
 			</table>
 		</div>
 		<div class="content-right">
+			<a href="add.php"><div class="content-right-add-button">
+				<h2> Artikel toevoegen</h2>
+			</div></a>
 		</div>
 	</div>
 </body>
 <footer>
 <script>
+	$host = '<?=$_SERVER["HTTP_HOST"]?>';
+
 	$(document).ready(function()
 	{
 	  $("tr:odd").css({
@@ -69,14 +80,40 @@ if (isset($_SESSION['username'])){
 		});
 	});
 	
-	function ConfirmDel(id){
+	function ConfirmDel(titel, table, id){
 		console.log("Delete function started");
-		if (confirm('Weet je zeker dat je het volgende artikel wilt verwijderen?\n ' + id)) {
-			window.location.replace("delete.php");
+		console.log($host);
+		if ($host == 'localhost') {
+			$host = '/timkoehoorn';
+		}
+		
+		if (confirm('Weet je zeker dat je het volgende artikel wilt verwijderen?\n ' + titel)) {
+			$location = $host + "/delete.php?table=" + table + "&id=" + id;
+			console.log($location);
+			console.log($host);
+			window.location = $location;
 			console.log("Delete succes");
 		} else {
 			console.log("Delete canceled");
 		}
+	}
+	
+	function Error() {
+			console.log("function 'Error' started");
+			
+			if(document.location.search === ""){
+				document.getElementById("error").style.display = "none";
+				console.log("returned true. no querystring given.");
+			}else if(document.location.search.split('=')[0] === "?status" ){
+				var error_message = document.location.search.split('=')[1];
+				var message = error_message.split("_").join(" ");
+				document.getElementById("error-msg").innerHTML = message;
+				console.log("returned false. '?status' found.");
+			}
+		};
+		
+	function ErrorRemove() {
+		document.getElementById("error").style.display = "none";
 	}
 	</script>
 </footer>
