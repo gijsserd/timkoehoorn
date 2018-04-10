@@ -24,11 +24,11 @@ require "connect.php";
 				{
 					session_start();
 					$username = $_POST["username"];
-					$password = $_POST["password"];
+					$password = hash("sha1", $_POST["password"]);
 					
 					$query = "SELECT * FROM user WHERE
 							  username = '$username' AND
-							  password = '$password'";
+							  CONCAT(password, salt) = '$password'";
 					
 					$result = mysqli_query($connect, $query) or die(mysqli_error("$connect"));
 					$count = mysqli_num_rows($result);
