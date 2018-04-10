@@ -40,8 +40,8 @@ if (isset($_SESSION['username'])){
 							<td><?=$row["creation_date"]?></td>
 							<td><?=$row["update_date"]?></td>
 							<td><?=$row["author"]?></td>
-							<td><a href="?>"><img/></a></td>
-							<td><a href="?>"><img/></a></td>
+							<td><a href=""><img src=""/></a></td>
+							<td onclick="ConfirmDel('<?=$row["title"]?>')"><a href=""><img src="img/deleteicon.png" /></a></td>
 						</tr>
 						<?php }
 						}else{ ?>
@@ -68,6 +68,16 @@ if (isset($_SESSION['username'])){
 		"background-color":"#c7c7c7",
 		});
 	});
+	
+	function ConfirmDel(id){
+		console.log("Delete function started");
+		if (confirm('Weet je zeker dat je het volgende artikel wilt verwijderen?\n ' + id)) {
+			window.location.replace("delete.php");
+			console.log("Delete succes");
+		} else {
+			console.log("Delete canceled");
+		}
+	}
 	</script>
 </footer>
 <?php
