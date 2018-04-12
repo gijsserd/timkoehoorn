@@ -85,7 +85,7 @@ if (isset($_SESSION['username'])){
 		console.log("Delete function started");
 		console.log($host);
 		if ($host == 'localhost') {
-			$host = '/timkoehoorn';
+			$host = 'localhost/timkoehoorn';
 		}
 		
 		if (confirm('Weet je zeker dat je het volgende artikel wilt verwijderen?\n ' + titel)) {
@@ -116,6 +116,7 @@ if (isset($_SESSION['username'])){
 	function ErrorRemove() {
 		document.getElementById("error").style.display = "none";
 	}
+	
 	</script>
 </footer>
 <?php
