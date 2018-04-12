@@ -22,11 +22,18 @@
 	</div>
 	
 	<div class="album-container" id="albums">
-		<h1>Albums</h1>
+		<h1>Muziek</h1>
+		<div class="spotify-container">
+			<iframe src="https://open.spotify.com/embed/artist/7y5DunkoStbLnIwfVR91T2" width="400" height="400" frameborder="0" allowtransparency="true"></iframe>
+		</div>
+
+		<div class="album">
+			
+		</div>
 	</div>
 	
 	<div id="topButton">
-		<img src="img/backgroundimage.png" onclick="ScrollTop('.main-nav')">
+		<img src="img/iconscroll2.png" onclick="ScrollTop('.main-nav')">
 	</div>
 </body>
 
