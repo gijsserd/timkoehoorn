@@ -178,12 +178,23 @@ a{
 .content-left{
 	grid-area: main;
 	height: 500px;
+	width: 100%;
+	max-width: 1200px;
 	margin: 20px;
 	box-sizing: border-box;
 }
 
+.content-left-header{
+	background-color: #111111;
+	color: #fefefe;
+	text-align: center;
+	box-shadow: 0px 2px 10px 0px grey;
+}
+
 .content-right{
 	grid-area: right;
+	width: 30%px;
+	min-width: 300px;
 	margin: 20px;
 	box-sizing: border-box;
 }
@@ -192,8 +203,11 @@ a{
 	background-color: #111111;
 	color: white;
 	text-align: center;
-	width: 100%;
+	width: 50%;
+	margin-left: 25%;
+	margin-right: 25%;
 	font-size: 100%;
+	line-height: 50px;
 	border-radius: 5px;
 	box-shadow: 0px 2px 10px 0px grey;
 }
@@ -203,6 +217,7 @@ a{
 	width: 100%;
 	padding: 20px;
 	box-sizing: border-box;
+	box-shadow: 0px 2px 10px 0px grey;
 }
 
 .content-form{
@@ -214,10 +229,6 @@ a{
 	margin-bottom: 20px;
 }
 
-.content-form-textarea{
-	
-}
-
 .ck-editor__editable{
 	background-color: #fefefe;
 }
@@ -227,7 +238,7 @@ a{
 	color: white;
 	margin-top: 20px;
 	border: none;
-	font-size: 80%;
+	font-size: 120%;
 }
 
 /* END Content Grid /

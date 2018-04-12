@@ -18,7 +18,7 @@ if (isset($_SESSION['username'])){
 </header>
 <body>
 	<div class="content-grid">
-		<div class="content-left">
+		<div class="content-left">			
 			<table class="content-table" >
 				<tr class="content-table-row">
 					<th>Titel</th>

@@ -22,6 +22,7 @@ require "connect.php";
 			<?php
 				if(isset($_POST["loginbutton"]))
 				{
+					
 					session_start();
 					$username = $_POST["username"];
 					$password = hash("sha1", $_POST["password"]);
