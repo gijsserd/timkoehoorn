@@ -179,7 +179,7 @@ a{
 	grid-area: main;
 	height: 500px;
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: 20px;
 	box-sizing: border-box;
 }

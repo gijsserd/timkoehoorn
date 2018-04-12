@@ -67,7 +67,7 @@ if (isset($_SESSION['username'])){
 			</div>
 		</div>
 		<div class="content-right">
-			<a href="cms_article.php?status=toevoegen_artikel_geannuleerd!"><div class="content-right-add-button">
+			<a href="cms_article.php?status=Aanpassen_artikel_geannuleerd!"><div class="content-right-add-button">
 				<h2> Aanpassen annuleren</h2>
 			</div></a>
 		</div>
