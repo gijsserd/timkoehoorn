@@ -13,6 +13,7 @@ if (isset($_SESSION['username'])){
 	
 </head>
 <header>
+	<a href="cms.php">Back</a>
 	<p>Logged in as <?php echo $_SESSION['username']; ?> </p>
 	<a href="logout.php">Logout</a>
 </header>
@@ -46,8 +47,8 @@ if (isset($_SESSION['username'])){
 							<td><?=$row["creation_date"]?></td>
 							<td><?=$row["update_date"]?></td>
 							<td><?=$row["author"]?></td>
-							<td title="Edit"><a href="edit.php"><img src="img/editicon.png"/></a></td>
-							<td onclick="ConfirmDel('<?=$row["title"]?>', 'article', '<?=$row["id"]?>')" title="Delete"><a href=""><img src="img/icondelete.png" /></a></td>
+							<td title="Edit"><a href="edit.php?id=<?=$row["id"]?>"><img src="img/editicon.png"/></a></td>
+							<td onclick="ConfirmDel('<?=$row["title"]?>', 'article', '<?=$row["id"]?>')" title="Delete"><a href=""><img src="img/deleteicon.png" /></a></td>
 						</tr>
 						<?php }
 						}else{ ?>

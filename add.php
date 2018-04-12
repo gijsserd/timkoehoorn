@@ -18,6 +18,8 @@ if (isset($_SESSION['username'])){
 	
 	<div class="content-grid">
 		<div class="content-left">
+			<h2 class="content-left-header">Schrijf een artikel</h2>
+			
 			<div class="content-form-div">
 				<form class="content-form" method="post" action="insert.php" enctype="multipart/form-data">
 					<h2>Titel: </h2><input class="content-form-text-title" type="text" name="title" />
