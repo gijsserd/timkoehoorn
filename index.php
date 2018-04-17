@@ -39,28 +39,46 @@
 	
 	<div class="news-container" id="news">
 		<h1>Nieuws</h1>
-		<div class="news-scroll-box">
-			<div class="news-article">
-				<h2>Test Titel 1</h2>
-				<p>Quisque lobortis leo et lectus sollicitudin, vel mattis augue venenatis. Mauris rutrum vulputate quam, et venenatis lectus dapibus vel. Sed rutrum enim magna. Nullam eget libero non lacus maximus posuere vel nec dui. Morbi consectetur diam eu aliquam suscipit. Nullam sed mauris quis odio malesuada fringilla. Integer lacus justo, gravida quis magna eget, accumsan consequat dui. Maecenas blandit purus ut venenatis malesuada. Praesent ac lacus mollis, porta eros eget, pretium libero. Suspendisse potenti. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In hac habitasse platea dictumst. Donec vel erat sit amet neque maximus accumsan. Pellentesque porta tempor dui, et lobortis diam mattis a. Suspendisse at pretium enim, eget dapibus purus. </p>
-				
+			<div class="news-article-item">
+				<div class="news-article-item-img">
+					<img src="img/template-news-1.jpg"/>
+				</div>
+				<div class="news-article-item-txt">
+					<h2>Optreden cafe buutvrij!</h2>
+					<p>Quisque lobortis leo et lectus sollicitudin, vel mattis augue venenatis.
+					Mauris rutrum vulputate quam, et venenatis lectus dapibus vel. Sed rutrum enim magna.</p> 
+					</div>
+				<div class="news-article-item-link">
+					<p>lees meer...</p>
+				</div>
 			</div>
-			<div class="news-article">
-				<h2>Test Titel 1</h2>
-				<p>Quisque lobortis leo et lectus sollicitudin, vel mattis augue venenatis. Mauris rutrum vulputate quam, et venenatis lectus dapibus vel. Sed rutrum enim magna. Nullam eget libero non lacus maximus posuere vel nec dui. Morbi consectetur diam eu aliquam suscipit. Nullam sed mauris quis odio malesuada fringilla. Integer lacus justo, gravida quis magna eget, accumsan consequat dui. Maecenas blandit purus ut venenatis malesuada. Praesent ac lacus mollis, porta eros eget, pretium libero. Suspendisse potenti. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In hac habitasse platea dictumst. Donec vel erat sit amet neque maximus accumsan. Pellentesque porta tempor dui, et lobortis diam mattis a. Suspendisse at pretium enim, eget dapibus purus. </p>
-				
+			<div class="news-article-item">
+				<div class="news-article-item-img">
+					<img src="img/template-news-2.jpg"/>
+				</div>
+				<div class="news-article-item-txt">
+					<h2>Recap: concert</h2>
+					<p>Quisque lobortis leo et lectus sollicitudin, vel mattis augue venenatis.
+					Mauris rutrum vulputate quam, et venenatis lectus dapibus vel. Sed rutrum enim magna.</p> 
+					</div>
+				<div class="news-article-item-link">
+					<p>lees meer...</p>
+				</div>
 			</div>
-			<div class="news-article">
-				<h2>Test Titel 1</h2>
-				<p>Quisque lobortis leo et lectus sollicitudin, vel mattis augue venenatis. Mauris rutrum vulputate quam, et venenatis lectus dapibus vel. Sed rutrum enim magna. Nullam eget libero non lacus maximus posuere vel nec dui. Morbi consectetur diam eu aliquam suscipit. Nullam sed mauris quis odio malesuada fringilla. Integer lacus justo, gravida quis magna eget, accumsan consequat dui. Maecenas blandit purus ut venenatis malesuada. Praesent ac lacus mollis, porta eros eget, pretium libero. Suspendisse potenti. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In hac habitasse platea dictumst. Donec vel erat sit amet neque maximus accumsan. Pellentesque porta tempor dui, et lobortis diam mattis a. Suspendisse at pretium enim, eget dapibus purus. </p>
-				
+			<div class="news-article-item">
+				<div class="news-article-item-img">
+					<img src="img/template-news-3.jpg"/>
+				</div>
+				<div class="news-article-item-txt">
+					<h2>Nieuwe foto's!</h2>
+					<p>Quisque lobortis leo et lectus sollicitudin, vel mattis augue venenatis.
+					Mauris rutrum vulputate quam, et venenatis lectus dapibus vel. Sed rutrum enim magna.</p> 
+					</div>
+				<div class="news-article-item-link">
+					<p>lees meer...</p>
+				</div>
 			</div>
-			<div class="news-article">
-				<h2>Test Titel 1</h2>
-				<p>Quisque lobortis leo et lectus sollicitudin, vel mattis augue venenatis. Mauris rutrum vulputate quam, et venenatis lectus dapibus vel. Sed rutrum enim magna. Nullam eget libero non lacus maximus posuere vel nec dui. Morbi consectetur diam eu aliquam suscipit. Nullam sed mauris quis odio malesuada fringilla. Integer lacus justo, gravida quis magna eget, accumsan consequat dui. Maecenas blandit purus ut venenatis malesuada. Praesent ac lacus mollis, porta eros eget, pretium libero. Suspendisse potenti. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In hac habitasse platea dictumst. Donec vel erat sit amet neque maximus accumsan. Pellentesque porta tempor dui, et lobortis diam mattis a. Suspendisse at pretium enim, eget dapibus purus. </p>
-				
-			</div>
-		</div>
+			
 	</div>
 	
 	<div id="topButton" >
