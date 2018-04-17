@@ -10,7 +10,7 @@
 		<div class="main-nav">
 			<ul>
 				<li onclick="ScrollTop('.about-container')"><a>Over Mij</a></li>
-				<li onclick="ScrollTop('.album-container')"><a>Albums</a></li>
+				<li onclick="ScrollTop('.muziek-container')"><a>Muziek</a></li>
 				<li onclick="ScrollTop('')"><a>Optredens</a></li>
 				<li onclick="ScrollTop('')"><a>Nieuws</a></li>
 			</ul>
@@ -21,15 +21,20 @@
 		<h1>Over Mij</h1>
 	</div>
 	
-	<div class="album-container" id="albums">
+	<div class="muziek-container" id="albums">
 		<h1>Muziek</h1>
-		<div class="spotify-container">
-			<iframe src="https://open.spotify.com/embed/artist/7y5DunkoStbLnIwfVR91T2" width="400" height="400" frameborder="0" allowtransparency="true"></iframe>
+		
+		<div class="muziek-sub-container">
+			<div class="album-container">
+				<div class="album">
+					
+				</div>
+			</div>
+			<div class="spotify-container">
+				<iframe src="https://open.spotify.com/embed/artist/7y5DunkoStbLnIwfVR91T2" width="400" height="400" frameborder="0" allowtransparency="true"></iframe>
+			</div>
 		</div>
-
-		<div class="album">
-			
-		</div>
+		
 	</div>
 	
 	<div class="news-container" id="news">
