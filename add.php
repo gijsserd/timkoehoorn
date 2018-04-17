@@ -23,7 +23,8 @@ if (isset($_SESSION['username'])){
 			<div class="content-form-div">
 				<form class="content-form" method="post" action="insert.php" enctype="multipart/form-data">
 					<h2>Titel: </h2><input class="content-form-text-title" type="text" name="title" />
-					<h2>Inhoud: </h2><input class="content-form-textarea" id="editor" type="textarea" name="content" />	
+					<h2>Inhoud: </h2><textarea class="content-form-textarea" id="editor" type="textarea" name="content"></textarea>	
+					<input class="content-form-text-title" type="file" name="uploadedimage" />
 					<input class="content-form-submit" type="submit">
 				</form>
 			</div>

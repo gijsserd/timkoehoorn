@@ -49,7 +49,7 @@ if (isset($_SESSION['username'])){
 							$prep_stmt->bind_param("ss", $title, $content);
 							
 							$title = $_POST["title"];
-							$content = $_POST["content"];;
+							$content = $_POST["content"];
 							
 							
 							if($prep_stmt->execute()){

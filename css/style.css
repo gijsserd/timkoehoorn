@@ -196,6 +196,10 @@ h1, h2, p {
 	box-sizing: border-box;
 }
 
+.news-article-item-link-href{
+	text-decoration: none;
+}
+
 /* CONTACT */
 
 .contact-container{

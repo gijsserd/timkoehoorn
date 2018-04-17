@@ -39,46 +39,7 @@
 	
 	<div class="news-container" id="news">
 		<h1>Nieuws</h1>
-			<div class="news-article-item">
-				<div class="news-article-item-img">
-					<img src="img/template-news-1.jpg"/>
-				</div>
-				<div class="news-article-item-txt">
-					<h2>Optreden cafe buutvrij!</h2>
-					<p>Quisque lobortis leo et lectus sollicitudin, vel mattis augue venenatis.
-					Mauris rutrum vulputate quam, et venenatis lectus dapibus vel. Sed rutrum enim magna.</p> 
-					</div>
-				<div class="news-article-item-link">
-					<p>lees meer...</p>
-				</div>
-			</div>
-			<div class="news-article-item">
-				<div class="news-article-item-img">
-					<img src="img/template-news-2.jpg"/>
-				</div>
-				<div class="news-article-item-txt">
-					<h2>Recap: concert</h2>
-					<p>Quisque lobortis leo et lectus sollicitudin, vel mattis augue venenatis.
-					Mauris rutrum vulputate quam, et venenatis lectus dapibus vel. Sed rutrum enim magna.</p> 
-					</div>
-				<div class="news-article-item-link">
-					<p>lees meer...</p>
-				</div>
-			</div>
-			<div class="news-article-item">
-				<div class="news-article-item-img">
-					<img src="img/template-news-3.jpg"/>
-				</div>
-				<div class="news-article-item-txt">
-					<h2>Nieuwe foto's!</h2>
-					<p>Quisque lobortis leo et lectus sollicitudin, vel mattis augue venenatis.
-					Mauris rutrum vulputate quam, et venenatis lectus dapibus vel. Sed rutrum enim magna.</p> 
-					</div>
-				<div class="news-article-item-link">
-					<p>lees meer...</p>
-				</div>
-			</div>
-			
+			<?php include "news.php"; ?>			
 	</div>
 	
 	<div id="topButton" >
