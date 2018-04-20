@@ -16,10 +16,10 @@ if (isset($_SESSION['username'])){
 </header>
 <body>
 	
-	<div class="content-grid">
-		<div class="content-left">
-			<h2 class="content-left-header">Schrijf een artikel</h2>
-			<div class="content-form-div">
+	
+		<div class="flex-content">
+			<div class="flex-content-form-div">
+			<h2 class="flex-content-header">Schrijf een artikel</h2>
 				<?php
 				if (isset($_GET["id"])){
 				$id = $_GET["id"];
@@ -32,7 +32,7 @@ if (isset($_SESSION['username'])){
 
 					if($result->num_rows > 0){
 						While($row = $result->fetch_assoc()){ ?>
-							<form class="content-form" method="post" enctype="multipart/form-data">
+							<form class="flex-content-form" method="post" enctype="multipart/form-data">
 								<h2>Titel: </h2><input value="<?=$row["title"]?>" class="content-form-text-title" type="text" name="title" />
 								<h2>Inhoud: </h2><textarea class="content-form-textarea" id="editor" type="textarea" name="content"><?=$row["content"]?></textarea>	
 								<input name="update-button" class="content-form-submit" type="submit">
@@ -64,14 +64,11 @@ if (isset($_SESSION['username'])){
 							$connect->close();
 						}
 				?>
-			</div>
-		</div>
-		<div class="content-right">
-			<a href="cms_article.php?status=Aanpassen_artikel_geannuleerd!"><div class="content-right-add-button">
+				<a href="cms_article.php?status=Aanpassen_artikel_geannuleerd!"><div class="flex-content-add-button">
 				<h2> Aanpassen annuleren</h2>
-			</div></a>
-		</div>
-	</div>	
+				</div></a>
+			</div>
+		</div>	
 </body>
 <footer>
 	<script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.2/classic/ckeditor.js"></script>
