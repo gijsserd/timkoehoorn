@@ -16,10 +16,10 @@ if (isset($_SESSION['username'])){
 </header>
 <body>
 	<div class="menu-container">
-		<a href="">
+		<a href="cms_music.php">
 			<div class="menu-item">
 				<div class="menu-icon">
-					<img src="img/muziekicon.png">
+					<img src="img/musicicon.png">
 				</div>
 				<h1>Muziek</h1>
 			</div>
@@ -35,7 +35,7 @@ if (isset($_SESSION['username'])){
 		<a href="">
 			<div class="menu-item">
 				<div class="menu-icon">
-					<img src="img/loggedinlogo.png">
+					<img src="img/loggedinicon.png">
 				</div>
 				<h1>Logged in as:</h1>
 				<h1 class="menu-item-loguser" ><?php echo $_SESSION['username'] ?></h1>

@@ -1,6 +1,7 @@
 	<?php
 require "connect.php";
 
+
 ?>
 
 <!DOCTYPE html>
@@ -37,34 +38,52 @@ require "connect.php";
 			<div class="album-container">
 			<h2>Nieuwste Album</h2>
 				<div class="album">
-				
-					<img src="img/ihebil.jpg">
+					<?php 
+						$sql = "SELECT * FROM album WHERE creation_date=(SELECT MAX(creation_date) FROM album)";
+						$result = $connect->query($sql);
+						
+						$row = $result->fetch_assoc();
+						$album = $row["id"];
+					?>
+					<img src="<?=$row["image"]?>">
 					<div class="album-content">
 						<h3>Nummertjes</h3>
 						<ul>
-							<li>1. <a href="https://open.spotify.com/track/00dLqGsbVdTssDHl4towiN?si=0KUpIeAeTROJhkGdqiaa5Q" target="_blank">Liefdesliedjes</a></li>
-							<li>2. <a href="https://open.spotify.com/track/5X6IXCOlzcJyJcYEUAepYE?si=4lDDVTxoRJGGhF02aKA3YA" target="_blank">In Het Echt Ben Ik Leuker</a></li>
-							<li>3. <a href="https://open.spotify.com/track/1rSTBTRmp3R0nsYJQGZeDu?si=ANIv9XqjT5uqA5aRI4Iq5Q" target="_blank">Voor David</a></li>
-							<li>4. <a href="https://open.spotify.com/track/5O2rOyBVD5dIDXrBKAdUQv?si=qQzjobc_R-qR8B53idKyRA" target="_blank">Ik Uit Mijn Frustratie Middels Alcohol en Popmuziek</a></li>
-							<li>5. <a href="https://open.spotify.com/track/6loTySK5j0Zk0VHbKfePrr?si=OQsfD3JNT1SGB67D3uZUNw" target="_blank">Brief Aan Bart, Pascal en Iris</a></li>
+						<?php
+							$sql = "SELECT * FROM song WHERE album=".$album."";
+							$result = $connect->query($sql);
+							$count = 1;
+							if($result->num_rows > 0){
+							While($row = $result->fetch_assoc()){
+							
+						?>
+							<li><?=$count?> <a href="<?=$row["spotify"] ?>" target="_blank"><?=$row["name"]?></a></li>
+							<?php 
+							$count = $count + 1;
+								} 
+							}	
+							?>
 						</ul>
 					</div>
 				</div>
 				<h2>Nieuwste Single</h2>
 				<div class="single">
-					
-					<img src="img/hgdskommp.jpg">
+					<?php 
+						$sql = "SELECT * FROM song WHERE creation_date=(SELECT MAX(creation_date) FROM song)";
+						$result = $connect->query($sql);
+						$count = 1;
+						$row = $result->fetch_assoc();
+					?>
+					<img src="<?=$row["image"]?>">
 					<div class="single-content">
-						<p>rutrum vulputate quam, et venenatis lectus dapibus vel. Sed rutrum enim magna. Nullam eget libero non lacus maximus posuere vel nec dui.
-						Morbi consectetur diam eu aliquam suscipit. Nullam sed mauris quis odio malesuada fringilla. Integer lacus justo, gravida quis magna eget, accumsan consequat dui.
-						Maecenas blandit purus ut venenatis malesuada.
-						</p>
+						1 <a href="<?=$row["spotify"] ?>" target="_blank"><?=$row["name"]?></a>
 					</div>
 				</div>
 			</div>
 			
 			<div class="spotify-container">
-				<iframe src="https://open.spotify.com/embed/artist/7y5DunkoStbLnIwfVR91T2" width="400" height="400" frameborder="0" allowtransparency="true"></iframe>
+				<iframe src="https://open.spotify.com/embed/album/0m2tQ4VMcAr9x6nzQidxiR" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+				<iframe src="https://open.spotify.com/embed/album/4FL7TnpQrKsPA4mWGdtQEM" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 			</div>
 		</div>
 		
