@@ -1,4 +1,9 @@
- <!DOCTYPE html>
+<?php
+require "connect.php";
+
+?>
+
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Tim Koehoorn</title>
@@ -14,6 +19,10 @@
 				<li onclick="ScrollTop('')"><a>Optredens</a></li>
 				<li onclick="ScrollTop('')"><a>Nieuws</a></li>
 			</ul>
+		</div>
+		
+		<div class="down-arrow">
+			<img src="img/iconscrolldown.png" onclick="ScrollTop('.about-container')">
 		</div>
 	</div>
 	
@@ -83,7 +92,7 @@
 <script>
 	function ScrollTop(selector) {
         var el = document.querySelector(selector);
-        el.scrollIntoView({behavior: "smooth", block: "center"});
+        el.scrollIntoView({behavior: "smooth", block: "start"});
 		console.log(el);
     }
 	

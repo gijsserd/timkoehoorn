@@ -19,7 +19,7 @@ if (isset($_SESSION['username'])){
 		<a href="">
 			<div class="menu-item">
 				<div class="menu-icon">
-					<img src="img/muziek logo.png">
+					<img src="img/muziekicon.png">
 				</div>
 				<h1>Muziek</h1>
 			</div>
@@ -27,7 +27,7 @@ if (isset($_SESSION['username'])){
 		<a href="cms_article.php">
 			<div class="menu-item">
 				<div class="menu-icon">
-					<img src="img/nieuwslogo.png">
+					<img src="img/newsicon.png">
 				</div>
 				<h1>Article</h1>
 			</div>

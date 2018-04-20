@@ -70,6 +70,27 @@ h1, h2, p {
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.down-arrow {
+	margin: 0 auto;
+	background-color: rgba(250,250,250,0.8);
+	border-radius: 50%;
+	margin-bottom: 20px;
+	width: 60px;
+	height: 60px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.down-arrow img {
+	height: 100%;
+}
+
+.down-arrow:hover {
+	background-color: rgba(200,200,200,0.8);
 }
 
 /* NAVIGATION */
