@@ -100,8 +100,24 @@ require "connect.php";
 	
 	<div class="contact-container">
 		<h1>Contact</h1>
-		<div class="contact-left-box">
+		<div class="contact-container-box">
+			<a><div class="contact-box">
+				<img class="contact-box-img" src="img/phone-icon.png"/>
+				<h2>tel: 06 43 43 84 47</h2>
+			</div></a>
+			<a href="mailto:d.kirsch@student.fontys.nl"><div class="contact-box">
+				<img class="contact-box-img" src="img/mail-icon.png"/>
+				<h2>timkoehoorn@live.nl</h2>
+			</div></a>
+			<a><div class="contact-box">
+				<img class="contact-box-img" src="img/whatsapp-icon.png"/>
+				<h2>06 43 43 84 47</h2>
+			</div></a>
 		</div>
+	</div>
+	
+	<div class="footer">
+		
 	</div>
 	
 </body>

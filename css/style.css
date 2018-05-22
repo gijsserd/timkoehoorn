@@ -7,6 +7,12 @@ h1, h2, p {
 	font-family: 'Roboto', sans-serif;
 }
 
+a{
+	
+	color: black;
+	text-decoration: none;
+}
+
 #topButton {
 	display: none;
 	position: fixed;
@@ -310,10 +316,9 @@ h1, h2, p {
 
 .contact-container{
 	width: 100%;
-	height: 40vh;
 	background-color: #FEFEFE;
-	display: flex;
 	flex-direction: column;
+	
 }
 
 .contact-container h1{
@@ -322,4 +327,50 @@ h1, h2, p {
 	width: 100%;
 	margin-top: 2vh;
 	font-size: 50px;
+}
+
+.contact-container-box{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	padding-left: 200px;
+	padding-right: 200px;
+	box-sizing: border-box;
+}
+
+.contact-box{
+	display: flex;
+	background-color: #fdeeee;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 20px;
+	width: 300px;
+	height: 300px;
+	border: 5px solid #800000;
+	border-radius: 100%;
+}
+
+.contact-box h2{
+	text-align: center;
+	color: #800000;
+}
+
+.contact-box-img{
+	height: 100px;
+}
+
+/*
+.contact-info{
+	margin: 20px;
+	width: 500px;
+	height: 500px;
+	border: 5px solid #800000;
+	border-radius: 20px;
+}
+*/
+
+/* Footer */
+.footer{
+	
 }
