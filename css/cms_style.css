@@ -1,4 +1,7 @@
 /* login */
+body {
+	font-family: 'Lato', sans-serif;
+}
 
 .loginform{
 	margin: 0 auto;
@@ -337,6 +340,12 @@ a{
 	margin-top: 20px;
 	border: none;
 	font-size: 120%;
+}
+
+/* Music */
+
+.flex-song-table{
+	text-align: left;
 }
 
 /* END Body */

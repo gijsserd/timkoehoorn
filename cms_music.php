@@ -24,47 +24,42 @@ if (isset($_SESSION['username'])){
 		<img onclick="ErrorRemove()" class="error-close-button" src="img/closeicon.png"/>
 	</div>
 	
-	<div class="content-grid">
-		<div class="content-left">
-			<table class="content-table" >
-				<tr class="content-table-row">
-					<th>Titel</th>
-					<th>Aangemaakt op</th>
-					<th></th>
-					<th></th>
-				</tr>
-				
-			<?php
-				$sql = "SELECT * FROM album";
-				$result = $connect->query($sql);
+	<div class="flex-content">
+		<table class="flex-content-table" >
+			<tr class="flex-content-table-row">
+				<th>Titel</th>
+				<th>Aangemaakt op</th>
+				<th></th>
+				<th></th>
+				<th class="add"><a href="add_music.php"><img class="flex-content-table-icon" src="img/addicon.png" /></a></th>
+			</tr>
+			
+		<?php
+			$sql = "SELECT * FROM album";
+			$result = $connect->query($sql);
 
-					if($result->num_rows > 0){
-					While($row = $result->fetch_assoc()){
-						?><tr>
-							<td><?=$row["name"]?></td>
-							<td><?=$row["creation_date"]?></td>
-							<td title="Edit"><a href="edit.php?id=<?=$row["id"]?>"><img src="img/editicon.png"/></a></td>
-							<td onclick="ConfirmDel('<?=$row["title"]?>', 'article', '<?=$row["id"]?>')" title="Delete"><a href=""><img src="img/deleteicon.png" /></a></td>
-						</tr>
-						<?php }
-						}else{ ?>
-						<tr>
-							<td>no data found</td>
-							<td>no data found</td>
-							<td>no data found</td>
-							<td>no data found</td>
-						</tr>
-						<?php }
-					$connect->close();					
-			?>
-			</table>
-		</div>
-		<div class="content-right">
-			<a href="add.php"><div class="content-right-add-button">
-				<h2> Artikel toevoegen</h2>
-			</div></a>
-		</div>
+				if($result->num_rows > 0){
+				While($row = $result->fetch_assoc()){
+					?><tr>
+						<td><?=$row["name"]?></td>
+						<td><?=$row["creation_date"]?></td>
+						<td title="Edit"><a href="edit.php?id=<?=$row["id"]?>"><img src="img/editicon.png" class="flex-content-table-icon"/></a></td>
+						<td onclick="ConfirmDel('<?=$row["name"]?>', 'album', '<?=$row["id"]?>')" title="Delete"><a href=""><img src="img/deleteicon.png" class="flex-content-table-icon" /></a></td>
+					</tr>
+					<?php }
+					}else{ ?>
+					<tr>
+						<td>no data found</td>
+						<td>no data found</td>
+						<td>no data found</td>
+						<td>no data found</td>
+					</tr>
+					<?php }
+				$connect->close();					
+		?>
+		</table>
 	</div>
+
 </body>
 <footer>
 <script>
