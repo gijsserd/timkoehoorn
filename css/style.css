@@ -127,6 +127,84 @@ a{
 	color: #fefefe;
 }
 
+/* OPTREDEN */
+
+.optreden-container{
+	width: 100%;
+	padding: 5vh;
+	background-color: #fefefe;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+}
+
+.optreden-container h1{
+	text-align: center;
+	color: #800000;
+	width: 100%;
+	margin: 0;
+	font-size: 50px;
+}
+
+.optreden-sub-container{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.optreden-infobox-left{
+	width: 50%;
+	padding: 10px;
+	box-sizing: border-box;	
+}
+
+.optreden-recent{
+	display: flex;
+}
+
+.optreden-recent h2{
+	margin: 0;
+}
+
+.optreden-recent p{
+	text-align: center;
+}
+
+.optreden-recent-left{
+	text-align: center;
+	border: 2px solid #800000;
+}
+
+.optreden-recent-right{
+	width: 50%;
+}
+
+.optreden-recent-right p{
+	text-align: left;
+}
+
+.optreden-scrollbox{
+	width: 100%;
+	max-height: 300px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	border: 2px solid #800000;
+}
+
+.optreden{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 100%;
+	height: 100px;
+	background-color: grey;
+}
+
+.optreden-infobox-right{
+	width: 50%;
+	height: 200px;
+	background-color: blue;
+}
+
 /* ABOUT */
 
 .about-container {

@@ -27,6 +27,38 @@ require "connect.php";
 		</div>
 	</div>
 	
+	<div class="optreden-container" id="optreden">
+		<h1>Optredens</h1>
+		<div class="optreden-sub-container">
+			<div class="optreden-infobox-left">
+				<div class="optreden-recent">
+					<div class="optreden-recent-left">
+						<h2>19:00</H2>
+						<h2>12-12-2018</h2>
+					</div>
+					<div class="optreden-recent-right">
+						<h2>Naam locatie</h2>
+						<p>omschrijving van het optreden</p>
+					</div>
+				</div>
+				<div class="optreden-scrollbox">
+					<div class="optreden">
+					</div>
+					<div class="optreden">
+					</div>
+					<div class="optreden">
+					</div>
+					<div class="optreden">
+					</div>
+					<div class="optreden">
+					</div>
+				</div>
+			</div>
+			<div class="optreden-infobox-right">
+			</div>
+		</div>
+	</div>
+	
 	<div class="about-container" id="about">
 		<h1>Over Mij</h1>
 	</div>
@@ -92,7 +124,7 @@ require "connect.php";
 	<div class="news-container" id="news">
 		<h1>Nieuws</h1>
 			<?php include "news.php"; ?>	
-		<a class="news-container-a" href="news_page.php"><h2>Alle nieuws artikelen ></h2></a>
+		<a class="news-container-a	" href="news_page.php"><h2>Alle nieuws artikelen ></h2></a>
 	</div>
 	
 	<div id="topButton" >
