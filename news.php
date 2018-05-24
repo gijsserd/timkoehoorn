@@ -1,7 +1,7 @@
 <?php
 	require "connect.php";
 
-	$sql = "SELECT LEFT (content, 200), title, image FROM article ORDER BY creation_date DESC LIMIT 3";
+	$sql = "SELECT LEFT (content, 200), id, title, image FROM article ORDER BY creation_date DESC LIMIT 3";
 	$result = $connect->query($sql);
 	
 	if($result->num_rows > 0){
@@ -17,7 +17,7 @@
 					<p><?=$content?></p> 
 					</div>
 				<div class="news-article-item-link">
-					<a href=""><p>Lees meer...</p></a>
+					<a href="news_page.php?news_id=<?=$row['id']?>"><p>Lees meer...</p></a>
 				</div>
 			</div>
 		<?php

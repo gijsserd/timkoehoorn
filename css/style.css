@@ -269,6 +269,12 @@ a{
 	font-size: 50px;
 }
 
+.news-container-a {
+	text-align: center;
+	color: #FEFEFE;
+	width: 100%;
+}
+
 .news-article-item{
 	width: 450px;
 	height: 600px;
@@ -310,6 +316,35 @@ a{
 
 .news-article-item-link-href{
 	text-decoration: none;
+}
+
+.news-page-header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #800000;
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.news-page-header h2{
+	color: white;
+	margin: 20px;
+}
+
+.news-page-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 20px;
+}
+
+.news-page{
+	text-align: center;
+}
+
+.news-page-img{
+	height: 500px;
 }
 
 /* CONTACT */

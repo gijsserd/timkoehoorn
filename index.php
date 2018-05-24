@@ -91,7 +91,8 @@ require "connect.php";
 	
 	<div class="news-container" id="news">
 		<h1>Nieuws</h1>
-			<?php include "news.php"; ?>			
+			<?php include "news.php"; ?>	
+		<a class="news-container-a" href="news_page.php"><h2>Alle nieuws artikelen ></h2></a>
 	</div>
 	
 	<div id="topButton" >
