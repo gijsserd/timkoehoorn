@@ -149,10 +149,11 @@ a{
 .optreden-sub-container{
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 	width: 100%;
 }
 
-.optreden-infobox-left{
+.optreden-infobox{
 	width: 50%;
 	padding: 10px;
 	box-sizing: border-box;	
@@ -160,6 +161,11 @@ a{
 
 .optreden-recent{
 	display: flex;
+	align-items: center;
+	height: auto;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 2px solid #800000;
 }
 
 .optreden-recent h2{
@@ -172,17 +178,81 @@ a{
 
 .optreden-recent-left{
 	text-align: center;
+	background-color: #fdeeee;
+	height: 100%;
+	min-width: 150px;
 	border: 2px solid #800000;
 }
 
+.optreden-recent-left h2{
+	color: #800000;
+}
+
 .optreden-recent-right{
-	width: 50%;
+	
+}
+
+.optreden-recent-right h2{
+	color: #800000;
+	margin: 5px;
+	margin-bottom: 10px;
+}
+
+.optreden-recent-right h3{
+	font-size: 100%;
+	color: #800000;
+	margin: 5px;
 }
 
 .optreden-recent-right p{
 	text-align: left;
+	margin: 5px;
 }
 
+.optreden{
+	display: flex;
+	align-items: center;
+	height: auto;
+	margin: 10px;
+	margin-left: 40px;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 2px solid #800000;
+}
+
+.optreden-left{
+	text-align: center;
+	background-color: #fdeeee;
+	height: 100%;
+	min-width: 150px;
+	border: 2px solid #800000;
+}
+
+.optreden-left h2{
+	margin: 0;
+	color: #800000;
+}
+
+.optreden-right h2{
+	font-size: 120%;
+	color: #800000;
+	margin: 5px;
+	margin-bottom: 10px;
+}
+
+.optreden-right h3{
+	font-size: 80%;
+	color: #800000;
+	margin: 5px;
+}
+
+.optreden-right p{
+	font-size: 80%;
+	text-align: left;
+	margin: 5px;
+}
+
+/*
 .optreden-scrollbox{
 	width: 100%;
 	max-height: 300px;
@@ -203,7 +273,8 @@ a{
 	width: 50%;
 	height: 200px;
 	background-color: blue;
-}
+} 
+*/
 
 /* ABOUT */
 
@@ -212,6 +283,7 @@ a{
 	padding: 5vh;
 	background-color: #800000;
 	display: flex;
+	flex-direction: column;
 	box-sizing: border-box;
 }
 
@@ -221,6 +293,34 @@ a{
 	width: 100%;
 	margin: 0;
 	font-size: 50px;
+}
+
+.about-sub-container{
+	display: flex;
+	width: 100%;
+	padding-left: 50px;
+	padding-right: 50px;
+	box-sizing: border-box;
+}
+
+.about-left{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 50px;
+	width: 50%;
+}
+
+.about-left p{
+	color: #FEFEFE;
+	margin-bottom: 10px;
+}
+
+.about-right{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
 }
 
 /* MUZIEK */

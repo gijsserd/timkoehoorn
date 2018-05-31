@@ -15,52 +15,97 @@ require "connect.php";
 	<div class="image-container">
 		<div class="main-nav">
 			<ul>
+				<li onclick="ScrollTop('.optreden-container')"><a>Optredens</a></li>
 				<li onclick="ScrollTop('.about-container')"><a>Over Mij</a></li>
 				<li onclick="ScrollTop('.muziek-container')"><a>Muziek</a></li>
-				<li onclick="ScrollTop('')"><a>Optredens</a></li>
-				<li onclick="ScrollTop('')"><a>Nieuws</a></li>
+				<li onclick="ScrollTop('.news-container')"><a>Nieuws</a></li>
 			</ul>
 		</div>
 		
 		<div class="down-arrow">
-			<img src="img/iconscrolldown.png" onclick="ScrollTop('.about-container')">
+			<img src="img/iconscrolldown.png" onclick="ScrollTop('.optreden-container')">
 		</div>
 	</div>
 	
 	<div class="optreden-container" id="optreden">
 		<h1>Optredens</h1>
 		<div class="optreden-sub-container">
-			<div class="optreden-infobox-left">
-				<div class="optreden-recent">
-					<div class="optreden-recent-left">
-						<h2>19:00</H2>
-						<h2>12-12-2018</h2>
-					</div>
-					<div class="optreden-recent-right">
-						<h2>Naam locatie</h2>
-						<p>omschrijving van het optreden</p>
-					</div>
-				</div>
-				<div class="optreden-scrollbox">
-					<div class="optreden">
-					</div>
-					<div class="optreden">
-					</div>
-					<div class="optreden">
-					</div>
-					<div class="optreden">
-					</div>
-					<div class="optreden">
-					</div>
-				</div>
-			</div>
-			<div class="optreden-infobox-right">
+			<div class="optreden-infobox">
+				
+					<?php 
+						$sql = "SELECT * FROM performance ORDER By time DESC";
+						$result = $connect->query($sql);
+						
+						if($result->num_rows > 0){
+							$i = 0;
+							While($row = $result->fetch_assoc()){
+									if($i == 0){
+										?>
+										<div class="optreden-recent">
+											<div class="optreden-recent-left">
+												<h2>24:00</H2>
+												<h2><?=$row["time"]?></h2>
+											</div>
+											<div class="optreden-recent-right">
+												<h2><?=$row["name"]?></h2>
+												<h3><?=$row["location"]?></h3>
+												<p><?=$row["description"]?></p>
+											</div>
+										</div>
+										<?php 
+										$i = 1;
+									}else{
+										?>
+										<div class="optreden">
+											<div class="optreden-left">
+												<h2>12:00</H2>
+												<h2><?=$row["time"]?></h2>
+											</div>
+											<div class="optreden-right">
+												<h2><?=$row["name"]?></h2>
+												<h3><?=$row["location"]?></h3>
+												<p><?=$row["description"]?></p>
+											</div>
+										</div>
+										<?php 
+									}
+						
+								} 
+							}else{
+								?>
+								<div class="optreden-recent">
+									<div class="optreden-recent-left">
+										<h2>19:00</H2>
+										<h2>0000-00-00</h2>
+									</div>
+									<div class="optreden-recent-right">
+										<h2>geen optredens gevonden</h2>
+										<p>geen optredens gevonden</p>
+									</div>
+								</div>
+								<?php
+							}	
+					?>
+				
 			</div>
 		</div>
 	</div>
 	
 	<div class="about-container" id="about">
 		<h1>Over Mij</h1>
+		<div class="about-sub-container">
+			<div class="about-left">
+				<p>In sed sodales nunc. Nulla tortor lorem, scelerisque a orci non, mattis tincidunt nibh. In ut accumsan nulla. Cras eu odio dui. Nullam quam urna, convallis ut tortor eu, hendrerit accumsan massa. Quisque malesuada dictum diam a tristique. Aliquam scelerisque quis nisl eu fermentum. Ut eu finibus eros, nec sagittis leo. Sed porttitor, libero sit amet tempus tincidunt, nunc tellus dapibus lectus, eu iaculis velit nibh vel tortor.
+				</p>
+				<p>Aliquam laoreet, enim sed tincidunt aliquet, tellus elit semper lacus, semper efficitur massa nunc vehicula ex. Aliquam tristique vitae arcu quis hendrerit. Mauris accumsan elit id libero bibendum molestie. Aenean quam urna, cursus vitae condimentum id, finibus sit amet magna. In pellentesque faucibus nisl, id interdum tellus facilisis quis. Nam nec ex non lorem rhoncus vestibulum vitae nec nibh. Aenean in diam lobortis, tempus ex tincidunt, ultrices quam. Curabitur viverra diam eu diam facilisis tempus. Donec gravida, quam in vestibulum feugiat, felis diam accumsan tortor, sed pharetra est quam nec nibh. Donec at feugiat est, non vulputate sapien. Phasellus suscipit erat sit amet quam ultrices ultrices. In hendrerit efficitur malesuada. Phasellus quis dolor vitae nisi bibendum varius. In hac habitasse platea dictumst. Fusce vel est consectetur, condimentum diam ac, rhoncus quam. Integer ac massa erat.
+				</p>
+				<p>Morbi congue scelerisque risus vel cursus. Aliquam ut leo venenatis, laoreet arcu quis, pellentesque diam. Fusce ut felis risus. Phasellus diam metus, pellentesque hendrerit pretium ac, luctus eget dolor. Mauris viverra magna eu pulvinar pharetra. Pellentesque blandit tellus nec aliquet scelerisque. Suspendisse vel massa in arcu fermentum commodo.
+				</p>
+			</div>
+			<div class="about-right">
+				<img src="img/Tim koehoorn noback 3.png" />
+			</div>
+		</div>
 	</div>
 	
 	<div class="muziek-container" id="albums">
