@@ -23,7 +23,8 @@ if (isset($_SESSION['username'])){
 				<h2>Foto </h2><input class="content-form-text-title" type="file" name="uploadedimage" />
 				<h2>Spotify Link </h2><input class="content-form-text-title" type="text" name="spotifylink" />
 				
-				<table class="flex-song-table">
+				<table class="flex-song-table" id="songtable">
+				<h3> Voeg liedjes toe </h3>
 					<tr>
 						<th>Titel</th>
 						<th>Spotify link</th>
@@ -33,12 +34,12 @@ if (isset($_SESSION['username'])){
 					<tr>
 						<td><input type="text" name="name" /></td>
 						<td><input type="text" name="song_spotifylink" /></td>
-						<td class="add"><a href=""><img class="flex-content-table-icon" src="img/addicon.png" /></a></td>
+						<td class="add"><img class="flex-content-table-icon" id="addButton" src="img/addicon.png" onclick="addField(this)" /></td>
 					</tr>
 				</table>
 				<input class="content-form-submit" type="submit">
 			</form>
-			<a href="cms_article.php?status=Toevoegen_artikel_geannuleerd!"><div class="flex-content-add-button">
+			<a href="cms_music.php?status=Toevoegen_album_geannuleerd!"><div class="flex-content-add-button">
 				<h2> Toevoegen annuleren</h2>
 			</div></a>
 		</div>
@@ -61,6 +62,19 @@ if (isset($_SESSION['username'])){
 			.catch( error => {
 			console.log( error );
 		} );
+		
+		function addField(n){
+			var tr = n.parentNode.parentNode.cloneNode(true);
+			var rowLength = document.getElementById('songtable').rows.length;
+			var highestRowIndex = rowLength - 1;
+			var addButton = document.getElementById('addButton');
+			console.log(rowLength);
+			document.getElementById('songtable').appendChild(tr);
+			if(this.rowIndex != highestRowIndex){
+				addButton.style.visibility = "hidden";
+			}
+			
+		}
 	</script>
 </footer>
 <?php

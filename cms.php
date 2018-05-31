@@ -32,6 +32,14 @@ if (isset($_SESSION['username'])){
 				<h1>Article</h1>
 			</div>
 		</a>
+		<a href="cms_optreden.php">
+			<div class="menu-item">
+				<div class="menu-icon">
+					<img src="img/optredenicon.png">
+				</div>
+				<h1>Optreden</h1>
+			</div>
+		</a>
 		<a href="">
 			<div class="menu-item">
 				<div class="menu-icon">
