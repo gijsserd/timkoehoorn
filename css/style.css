@@ -177,6 +177,7 @@ a{
 }
 
 .optreden-recent-left{
+	padding: 20px;
 	text-align: center;
 	background-color: #fdeeee;
 	height: 100%;
@@ -189,7 +190,8 @@ a{
 }
 
 .optreden-recent-right{
-	
+	padding: 20px;
+	width: 50%;
 }
 
 .optreden-recent-right h2{
