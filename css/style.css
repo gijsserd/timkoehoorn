@@ -171,11 +171,13 @@ a{
 }
 
 .optreden-recent-left{
+	padding: 20px;
 	text-align: center;
 	border: 2px solid #800000;
 }
 
 .optreden-recent-right{
+	padding: 20px;
 	width: 50%;
 }
 
