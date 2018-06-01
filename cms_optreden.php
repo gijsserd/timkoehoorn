@@ -15,11 +15,12 @@ if (isset($_SESSION['username'])){
 				<th>Beschrijving</th>
 				<th>Locatie</th>
 				<th>Datum</th>
+				<th>Tijd</th>
 				<th></th>
-				<th class="add"><a href="add_music.php"><img class="flex-content-table-icon" src="img/addicon.png" /></a></th>
+				<th class="add"><a href="add_optredens.php"><img class="flex-content-table-icon" src="img/addicon.png" /></a></th>
 			</tr>
 		<?php
-			$sql = "SELECT * FROM performance";
+			$sql = "SELECT `id`, `name`, `description`, `time`, `location`, `date`, LEFT(date, 5) AS date_5 FROM performance";
 			$result = $connect->query($sql);
 
 				if($result->num_rows > 0){
@@ -29,8 +30,9 @@ if (isset($_SESSION['username'])){
 						<td><?=$row["description"]?></td>
 						<td><?=$row["location"]?></td>
 						<td><?=$row["time"]?></td>
+						<td><?=$row["date_5"]?></td>
 						<td title="Edit"><a href="edit.php?id=<?=$row["id"]?>"><img src="img/editicon.png" class="flex-content-table-icon"/></a></td>
-						<td onclick="ConfirmDel('<?=$row["name"]?>', 'album', '<?=$row["id"]?>')" title="Delete"><a href=""><img src="img/deleteicon.png" class="flex-content-table-icon" /></a></td>
+						<td title="Delete"><a href="delete.php?table=performance&id=<?=$row['id']?>"><img src="img/deleteicon.png" class="flex-content-table-icon" /></a></td>
 					</tr>
 					<?php }
 					}else{ ?>

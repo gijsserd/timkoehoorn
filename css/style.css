@@ -162,7 +162,6 @@ a{
 .optreden-recent{
 	display: flex;
 	align-items: center;
-	height: auto;
 	padding-bottom: 20px;
 	margin-bottom: 20px;
 	border-bottom: 2px solid #800000;
@@ -182,12 +181,17 @@ a{
 	background-color: #fdeeee;
 	height: 100%;
 	min-width: 180px;
-	border: 2px solid #800000;
+	border-radius: 10px;
+}
+
+.optreden-recent-left h1{
+	color: #800000;
+	font-size: 220%;
 }
 
 .optreden-recent-left h2{
 	color: #800000;
-	font-size: 200%;
+	font-size: 160%;
 }
 
 .optreden-recent-right{
@@ -219,6 +223,7 @@ a{
 	padding-bottom: 20px;
 	margin-bottom: 20px;
 	border-bottom: 2px solid #800000;
+	border-radius: 10px;
 }
 
 .optreden-left{
@@ -226,10 +231,17 @@ a{
 	background-color: #fdeeee;
 	height: 100%;
 	min-width: 150px;
-	border: 2px solid #800000;
+	border-radius: 10px;
+}
+
+.optreden-left h1{
+	font-size: 160%;
+	margin: 0;
+	color: #800000;
 }
 
 .optreden-left h2{
+	font-size: 120%;
 	margin: 0;
 	color: #800000;
 }

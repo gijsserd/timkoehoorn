@@ -305,6 +305,7 @@ a{
 }
 
 .flex-content-form-div{
+	min-width: 500px;
 	max-width: 1000px;
 	background-color: #cecece;
 	box-sizing: border-box;
@@ -315,6 +316,10 @@ a{
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
+}
+
+.flex-content-form h2{
+	font-size: 130%;
 }
 
 .flex-content-add-button{

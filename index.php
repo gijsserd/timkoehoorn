@@ -33,7 +33,10 @@ require "connect.php";
 			<div class="optreden-infobox">
 				
 					<?php 
-						$sql = "SELECT * FROM performance ORDER By time DESC";
+						$sql = "SELECT `id`, `name`, `description`, `time`, `location`, `date`, LEFT(date, 5) AS date_5
+								FROM performance 
+								WHERE time >= CURDATE()
+								ORDER By time ASC";
 						$result = $connect->query($sql);
 						
 						if($result->num_rows > 0){
@@ -43,12 +46,12 @@ require "connect.php";
 										?>
 										<div class="optreden-recent">
 											<div class="optreden-recent-left">
-												<h2>24:00</H2>
 												<h2><?=$row["time"]?></h2>
+												<h1><?=$row["date_5"]?></H1>
 											</div>
 											<div class="optreden-recent-right">
 												<h2><?=$row["name"]?></h2>
-												<h3><?=$row["location"]?></h3>
+												<h3>Adres: <?=$row["location"]?></h3>
 												<p><?=$row["description"]?></p>
 											</div>
 										</div>
@@ -58,12 +61,12 @@ require "connect.php";
 										?>
 										<div class="optreden">
 											<div class="optreden-left">
-												<h2>12:00</H2>
-												<h2><?=$row["time"]?></h2>
+												<h2><?=$row["time"]?></H2>
+												<h1><?=$row["date_5"]?></h1>
 											</div>
 											<div class="optreden-right">
 												<h2><?=$row["name"]?></h2>
-												<h3><?=$row["location"]?></h3>
+												<h3>Adres: <?=$row["location"]?></h3>
 												<p><?=$row["description"]?></p>
 											</div>
 										</div>
@@ -104,6 +107,8 @@ require "connect.php";
 			</div>
 			<div class="about-right">
 				<img src="img/Tim koehoorn noback 3.png" />
+				<a class="twitter-timeline" data-width="400" data-height="500" data-theme="light" data-link-color="#800000" href="https://twitter.com/timkoehoorn?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+				
 			</div>
 		</div>
 	</div>

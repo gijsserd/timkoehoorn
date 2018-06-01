@@ -22,7 +22,7 @@ if (isset($_SESSION['username'])){
 				<div class="menu-icon">
 					<img src="img/newsicon.png">
 				</div>
-				<h1>Article</h1>
+				<h1>Artikels</h1>
 			</div>
 		</a>
 		<a href="cms_optreden.php">

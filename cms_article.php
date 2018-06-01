@@ -32,8 +32,8 @@ if (isset($_SESSION['username'])){
 							<td><?=$row["author"]?></td>
 							<td title="Edit">
 									<a href="edit.php?id=<?=$row["id"]?>"><img class="flex-content-table-icon" src="img/editicon.png"/></a></td>
-							<td onclick="ConfirmDel('<?=htmlspecialchars($row["title"])?>', 'article', '<?=$row["id"]?>')" title="Delete">
-								<a href=""><img class="flex-content-table-icon" src="img/deleteicon.png" /></a></td>
+							<td title="Delete">	
+								<a href="delete.php?table=article&id=<?=$row['id']?>"><img class="flex-content-table-icon" src="img/deleteicon.png" /></a></td>
 						</tr>
 						<?php }
 						}else{ ?>

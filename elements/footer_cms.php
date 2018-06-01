@@ -18,14 +18,19 @@
 		}
 		var test = confirm('Weet je zeker dat je het volgende artikel wilt verwijderen?\n ' + titel);
 		if (test == true) {
-			//var location = "delete.php?table=" + table + "&id=" + id;
-			console.log(location);
+			var loc = "delete.php?table=" + table + "&id=" + id;
+			console.log(loc);
 			console.log(host);
-			window.location = "delete.php?" + table + "&id=" + id;
-			console.log("Delete succes");
+			RedirectDel(loc);
 		} else {
 			console.log("Delete canceled");
 		}
+	}
+	
+	function RedirectDel(loc) {
+		console.log(loc);
+		window.location.href = loc;
+		console.log("Delete succes");
 	}
 	
 	function Error() {
