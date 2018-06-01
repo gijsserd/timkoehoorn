@@ -264,6 +264,7 @@ a{
 
 .flex-content-table{
 	box-shadow: 0px 2px 10px 0px grey;
+	max-width: 80%;
 }
 
 .flex-content-table-row{

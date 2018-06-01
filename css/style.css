@@ -181,17 +181,16 @@ a{
 	text-align: center;
 	background-color: #fdeeee;
 	height: 100%;
-	min-width: 150px;
+	min-width: 180px;
 	border: 2px solid #800000;
 }
 
 .optreden-recent-left h2{
 	color: #800000;
+	font-size: 200%;
 }
 
 .optreden-recent-right{
-	padding: 20px;
-	width: 50%;
 }
 
 .optreden-recent-right h2{
