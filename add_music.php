@@ -31,9 +31,9 @@ if (isset($_SESSION['username'])){
 						<th></th>
 					</tr>
 					
-					<tr>
-						<td><input type="text" name="name" /></td>
-						<td><input type="text" name="song_spotifylink" /></td>
+					<tr id="songrow">
+						<td><input type="text" name="songname[]" id="songname" /></td>
+						<td><input type="text" name="song_spotifylink[]" id="song_spotifylink" /></td>
 						<td class="add"><img class="flex-content-table-icon" id="addButton" src="img/addicon.png" onclick="addField(this)" /></td>
 					</tr>
 				</table>
@@ -62,16 +62,31 @@ if (isset($_SESSION['username'])){
 			.catch( error => {
 			console.log( error );
 		} );
+			
+		var count = 1;
 		
 		function addField(n){
 			var tr = n.parentNode.parentNode.cloneNode(true);
+			var rowId = 'songrow' + count;
+			tr.id = rowId;
+			count = count + 1;
+			
 			var rowLength = document.getElementById('songtable').rows.length;
 			var highestRowIndex = rowLength - 1;
+			
 			var addButton = document.getElementById('addButton');
-			console.log(rowLength);
-			document.getElementById('songtable').appendChild(tr);
-			if(this.rowIndex != highestRowIndex){
-				addButton.style.visibility = "hidden";
+			var songName = document.getElementById('songname');
+			var songSpotifyLink = document.getElementById('song_spotifylink');
+			var songs = [songName, songSpotifyLink];
+			console.log(songs);
+			
+			if(songName.value != '' && songSpotifyLink.value != ''){
+				console.log(rowLength);
+				console.log("highestrowindex " + highestRowIndex);
+				document.getElementById('songtable').appendChild(tr);				
+			}
+			else{
+				alert('Vul alle velden in voordat je een nieuw liedje wil gaan invullen.');
 			}
 			
 		}

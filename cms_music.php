@@ -14,7 +14,6 @@ if (isset($_SESSION['username'])){
 				<th>Titel</th>
 				<th>Aangemaakt op</th>
 				<th></th>
-				<th></th>
 				<th class="add"><a href="add_music.php"><img class="flex-content-table-icon" src="img/addicon.png" /></a></th>
 			</tr>
 		<?php

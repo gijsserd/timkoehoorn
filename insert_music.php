@@ -41,6 +41,21 @@ session_start();
 		if ($prep_stmt->execute() === TRUE) {
 			echo "<p>New record created successfully</p>";
 			$prep_stmt->close();
+			$last_id = $connect->insert_id;
+			$songtitle = $_POST['songname'];
+			$spotifyLink = $_POST['song_spotifylink'];
+			
+			$insertSongs = "INSERT INTO `song`(`name`,`album`,`spotify`)
+						VALUES ('$songtitle[0]', $last_id, '$spotifyLink[0]')";
+						
+			for($i = 1; $i < count($songtitle); $i++){
+				
+				$sqlValues = ", ('" . $songtitle[$i] . "', " . $last_id . ", '" . $spotifyLink[$i] . "')";
+				
+				$insertSongs = $insertSongs . $sqlValues;
+			}
+			//echo $insertSongs; die;
+			$connect->query($insertSongs);
 			$connect->close();
 			header("location: cms_music.php?status=Nieuw_Album_aangemaakt!");
 		} else {
@@ -55,4 +70,5 @@ session_start();
 		header("Location: login.php");
 		die;
 	}
+	
 ?>
