@@ -6,6 +6,7 @@ if (isset($_SESSION['username'])){
 <!DOCTYPE html>
 <html>
 <?php require "elements/header_cms.php" ?>
+<?php require "elements/error_cms.php" ?>
 	<div class="flex-content">
 	<table class="flex-content-table" >
 				<tr class="flex-content-table-row">

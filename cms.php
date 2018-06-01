@@ -6,14 +6,7 @@ if (isset($_SESSION['username'])){
 
 <!DOCTYPE html>
 <html>
-<head>
-	<title>CMS</title>
-	<link rel="stylesheet" type="text/css" href="css/cms_style.css">
-</head>
-<header>
-	<p>Logged in as <?php echo $_SESSION['username'] ?> </p>
-	<a href="logout.php">Logout</a>
-</header>
+<?php require "elements/header_cms.php" ?>
 <body>
 	<div class="menu-container">
 		<a href="cms_music.php">
@@ -52,6 +45,7 @@ if (isset($_SESSION['username'])){
 	</div>
 
 </body>
+<?php require "elements/footer_cms.php" ?>
 <?php
 			}
 	else {
