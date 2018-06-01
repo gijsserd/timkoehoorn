@@ -66,7 +66,7 @@ if (isset($_SESSION['username'])){
 	</table>
 	</div>
 </body>
-<?php require 'elements/footer.php'; ?>
+<?php require 'elements/footer_cms.php'; ?>
 <?php
 			}
 	else {
