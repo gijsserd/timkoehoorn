@@ -47,15 +47,24 @@ body {
 
 header{
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	background-color: #111111;
 	color: #fefefe;
 	height: 100px;
 	width: 100%;
 	box-sizing: border-box;
+	padding: 0px 20px 0px 20px;
 }
 
 header p{
 	margin: 0px;
+}
+
+header a {
+	padding: 5px;
+	border: #fefefe solid 1px;
 }
 
 /* END Header */
@@ -265,6 +274,7 @@ a{
 .flex-content-table{
 	box-shadow: 0px 2px 10px 0px grey;
 	max-width: 80%;
+	min-width: 36%;
 }
 
 .flex-content-table-row{

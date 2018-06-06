@@ -22,7 +22,7 @@ if (isset($_SESSION['username'])){
 				<div class="menu-icon">
 					<img src="img/newsicon.png">
 				</div>
-				<h1>Artikels</h1>
+				<h1>Artikelen</h1>
 			</div>
 		</a>
 		<a href="cms_optreden.php">
@@ -30,7 +30,7 @@ if (isset($_SESSION['username'])){
 				<div class="menu-icon">
 					<img src="img/optreden.png">
 				</div>
-				<h1>Optreden</h1>
+				<h1>Optredens</h1>
 			</div>
 		</a>
 		<a href="">
@@ -38,7 +38,7 @@ if (isset($_SESSION['username'])){
 				<div class="menu-icon">
 					<img src="img/loggedinicon.png">
 				</div>
-				<h1>Logged in as:</h1>
+				<h1>Ingelogd als:</h1>
 				<h1 class="menu-item-loguser" ><?php echo $_SESSION['username'] ?></h1>
 			</div>
 		</a>

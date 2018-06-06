@@ -19,6 +19,7 @@ require "connect.php";
 				<input type="password" name="password" placeholder="enter password" value="" required>
 				<input type="submit" name="loginbutton" value="Login" id="loginbutton">
 			</form>
+				<a href="./index.php">Terug naar homepagina</a>
 			<?php
 				if(isset($_POST["loginbutton"]))
 				{

@@ -5,7 +5,8 @@
 	
 </head>
 <header>
-	<a href="cms.php">Back</a>
-	<p>Logged in as <?php echo $_SESSION['username']; ?> </p>
+	<!-- <a href="cms.php">Back</a> 
+	<p>Logged in as <?php echo $_SESSION['username']; ?> </p> !-->
 	<a href="logout.php">Logout</a>
+	<p>CMS V1.0</p>
 </header>

@@ -322,6 +322,7 @@ a{
 	justify-content: center;
 	padding: 50px;
 	width: 50%;
+	letter-spacing: 1px;
 }
 
 .about-left p{
@@ -366,6 +367,7 @@ a{
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
+	font-size: 20px;
 }
 
 .album-container h2 {
@@ -409,6 +411,10 @@ a{
 	text-decoration: underline;
 }
 
+.single-content a:hover{
+	text-decoration: underline;
+}
+
 .album img {
 	height: 280px
 }
@@ -434,7 +440,9 @@ a{
 
 .spotify-container {
 	display: flex;
-    justify-content: center;
+	flex-direction: column;
+    justify-content: space-around;
+	align-items: center;
 	width: 40%;
 }
 
